@@ -1,32 +1,24 @@
-// // document.getElementById("body:background-color").innerHTML = "black";
-// function myFunc() {
-//   //   document.getElementById("").style.color = "yellow";
-// }
-// function changeBackground(color) {
-//   document.body.style.background = color;
-// }
+function changeBackground() {
+  let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "F"];
+  let hexcode = "";
 
-// window.addEventListener("load", function () {
-//   changeBackground("red");
-// });
-// console.log(changeBackground);
-// const my_button = document.getElementById("my_button");
-// my_button.addEventListener("click"),
-//   function onClick(event) {
-//     document.body.style.backgroundColor = "Black";
-//   };
+  for (let i = 0; i < 6; i++) {
+    let randomIndex = Math.floor(Math.random() * number.length);
+    console.log(randomIndex);
 
-// const btn = document.getElementById("btn");
-
-// btn.addEventListener("click"),
-//   function onClick(event) {
-//     // 👇️ change background color
-//     document.body.style.backgroundColor = "white";
-//   };
-
-// function myFunction() {
-//   document.getElementById("body").style.backgroundColor = "yellow";
-// }
-function myFunction() {
-  document.body.style.backgroundColor = "red";
+    hexcode += number[randomIndex];
+    //color = color + number[randomIndex]
+  }
+  document.getElementsByTagName("body")[0].style.background = `#${hexcode}`;
+  document.body.style.background = `#${hexcode}`;
 }
+// function changeBackground() {
+//   let color = ["red", "blue", "yellow"];
+//   let usedColor = "";
+//   let randomIndex = Math.floor(Math.random() * color.length);
+//   usedColor += color[randomIndex];
+//   console.log(randomIndex);
+
+//   // document.getElementsByTagName("body")[0].style.background = `#${hexcode}`;
+//   document.body.style.background = `${usedColor}`;
+// }

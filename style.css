@@ -24,4 +24,5 @@ button:hover {
 }
 #body {
   background-color: blue;
+  animation: color;
 }
